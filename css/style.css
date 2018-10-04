@@ -1,0 +1,199 @@
+/* Шрифт на странице используется OpenSans, OpenSans Bold, OpenSans Extra Bold */
+/*font-family: 'Pacifico', cursive;*/
+/*font-family: 'Open Sans', sans-serif;*/
+
+/*
+		==============================
+ 		Общиие
+ 		==============================
+*/
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*
+		==============================
+ 		Переиспользуемые стили
+ 		==============================
+*/
+
+/* Выравнивание контента по центру */
+.wrapper {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+/* Логотип */
+.logo { /* Общее название класса, поскольку переиспользуем его в footer */
+	font-family: 'Pacifico', cursive;
+	font-size: 28px;
+}
+
+/* Сбрасываем дефолтные стили списка */
+.inline-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.inline-list > li {
+	display: inline-block;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*
+	 ==============================
+		Стили одностраничника
+		==============================
+*/
+
+/* Секция Hero */
+.hero {
+	height: 800px;
+	min-height: 800px; /* Минимальная высота */
+	background: #000 url(../img/header.png) no-repeat center/cover;
+}
+
+/* Стили для header */
+.header {
+	height: 70px; /* Высота header'a */
+	background: #050c1c47; /* Затемнение фона header'a */
+	color: #fff;
+}
+
+.header,
+.inner {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between; /* Располагаем элементы по углам (слева и справ), замена float */
+	align-items: center;
+	align-content: center;
+}
+
+.header__logo {
+	display: flex; /* Применяем flex отображение */
+}
+
+.header__logo .logo {
+	padding-right: 25px;
+}
+
+/* Стили для слогана после логотипа */
+.slogan {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: lighter;
+	font-size: 13px;
+	color: #4a5455;
+	align-self: center; /* Вертикально центрируем */
+}
+
+/* Делаем отсупы между пунктами меню */
+.menu__item {
+	margin-right: 20px;
+	border-top: 1px solid transparent; /* Делаем прозрачную границу, дабы наша li-шка не вылазила */
+}
+
+/* Убираем отсуп справа */
+.menu__item:last-child {
+	margin-right: 0;
+}
+
+/* TODO: Сделать вверху 1пх линию и сделать li на всю высоту блока */
+.menu__item:hover {
+	border-top: 1px solid #32b0ee;
+}
+
+.menu__item a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 13px; /* Общий размер текста с .slogan, можно оптимизировать */
+	line-height: 69px; /* Делаю высоту линии для того чтоб бордер в 1пх при Hover был вверху, думаю не лучшее решение и нужно здесь подумать и переделать */
+}
+
+.menu__item a:hover {
+
+}
+
+/* Заголовок hero */
+
+.container {
+	margin-top: 420px;
+}
+
+.hero__title {
+	font-size: 62px;
+	margin-bottom: 10px;
+}
+
+.hero__title span {
+	font-weight: bold;
+}
+
+.hero__subtitle {
+	color: inherit;
+	text-align: inherit;
+	font-size: 48px;
+	margin-bottom: 28px;
+}
+
+.hero__subtitle span {
+	color: rgba(15, 235, 158, 0.9);
+}
+
+.hero__slogan {
+	font-size: 18px;
+}
+
+
+
+.hero__title,
+.hero__subtitle,
+.hero__slogan {
+	color: #fff;
+	text-align: center;
+}
+
+
+/*
+	Делаем линии вокруг текста
+ */
+
+.hero__slogan {
+	overflow: hidden;
+	text-align: center;
+}
+
+.hero__slogan:before,
+.hero__slogan:after {
+	background-color: #0feb9e;
+	content: "";
+	display: inline-block;
+	height: 1px;
+	position: relative;
+	vertical-align: middle;
+	margin: 0 23px;
+	width: 28px;
+}
+
+.hero__slogan:before {
+	right: 0.5em;
+	margin-left: -50%;
+}
+
+.hero__slogan:after {
+	left: 0.5em;
+	margin-right: -50%;
+}
+
+
+/* Соц-иконки */
+.hero__social-icons {
+
+}
