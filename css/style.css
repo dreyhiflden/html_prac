@@ -3,152 +3,165 @@
 /*font-family: 'Open Sans', sans-serif;*/
 
 /*
-		==============================
- 		Общиие
- 		==============================
+    ==============================
+    Общиие
+    ==============================
 */
 
 body {
-	font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /*
-		==============================
- 		Переиспользуемые стили
- 		==============================
+    ==============================
+    Переиспользуемые стили
+    ==============================
 */
 
 /* Выравнивание контента по центру */
 .wrapper {
-	width: 1170px;
-	margin: 0 auto;
+  width: 1170px;
+  margin: 0 auto;
 }
 
 /* Логотип */
 .logo { /* Общее название класса, поскольку переиспользуем его в footer */
-	font-family: 'Pacifico', cursive;
-	font-size: 28px;
+  font-family: 'Pacifico', cursive;
+  font-size: 28px;
 }
 
 /* Сбрасываем дефолтные стили списка */
 .inline-list {
-	padding: 0;
-	margin: 0;
-	list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .inline-list > li {
-	display: inline-block;
+  display: inline-block;
 }
 
 .clearfix::after {
-	content: "";
-	display: table;
-	clear: both;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.section-title {
+  text-transform: uppercase;
+  color: #0eb493;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+  padding-top: 36px;
+  color: rgba(6, 32, 51, 0.8);
 }
 
 /*
-	 ==============================
-		Стили одностраничника
-		==============================
+   ==============================
+    Стили одностраничника
+    ==============================
 */
 
 /* Секция Hero */
 .hero {
-	height: 800px;
-	min-height: 800px; /* Минимальная высота */
-	background: #000 url(../img/header.png) no-repeat center/cover;
+  height: 800px;
+  min-height: 800px; /* Минимальная высота */
+  background: #000 url(../img/header.png) no-repeat center/cover;
 }
 
 /* Стили для header */
 .header {
-	height: 70px; /* Высота header'a */
-	background: #050c1c47; /* Затемнение фона header'a */
-	color: #fff;
+  height: 70px; /* Высота header'a */
+  background: #050c1c47; /* Затемнение фона header'a */
+  color: #fff;
 }
 
 .header,
 .inner {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between; /* Располагаем элементы по углам (слева и справ), замена float */
-	align-items: center;
-	align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between; /* Располагаем элементы по углам (слева и справ), замена float */
+  align-items: center;
+  align-content: center;
 }
 
 .header__logo {
-	display: flex; /* Применяем flex отображение */
+  display: flex; /* Применяем flex отображение */
 }
 
 .header__logo .logo {
-	padding-right: 25px;
+  padding-right: 25px;
 }
 
 /* Стили для слогана после логотипа */
 .slogan {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: lighter;
-	font-size: 13px;
-	color: #4a5455;
-	align-self: center; /* Вертикально центрируем */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 13px;
+  color: #4a5455;
+  align-self: center; /* Вертикально центрируем */
 }
 
 /* Делаем отсупы между пунктами меню */
 .menu__item {
-	margin-right: 20px;
-	border-top: 1px solid transparent; /* Делаем прозрачную границу, дабы наша li-шка не вылазила */
+  margin-right: 20px;
+  border-top: 1px solid transparent; /* Делаем прозрачную границу, дабы наша li-шка не вылазила */
 }
 
 /* Убираем отсуп справа */
 .menu__item:last-child {
-	margin-right: 0;
+  margin-right: 0;
 }
 
 /* TODO: Сделать вверху 1пх линию и сделать li на всю высоту блока */
 .menu__item:hover {
-	border-top: 1px solid #32b0ee;
+  border-top: 1px solid #32b0ee;
 }
 
 .menu__item a {
-	text-decoration: none;
-	color: #fff;
-	font-size: 13px; /* Общий размер текста с .slogan, можно оптимизировать */
-	line-height: 69px; /* Делаю высоту линии для того чтоб бордер в 1пх при Hover был вверху, думаю не лучшее решение и нужно здесь подумать и переделать */
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px; /* Общий размер текста с .slogan, можно оптимизировать */
+  line-height: 69px; /* Делаю высоту линии для того чтоб бордер в 1пх при Hover был вверху, думаю не лучшее решение и нужно здесь подумать и переделать */
 }
 
-.menu__item a:hover {
 
-}
 
 /* Заголовок hero */
 
 .container {
-	margin-top: 420px;
+  margin-top: 360px;
 }
 
 .hero__title {
-	font-size: 62px;
-	margin-bottom: 10px;
+  font-size: 62px;
+  margin-bottom: 10px;
 }
 
 .hero__title span {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .hero__subtitle {
-	color: inherit;
-	text-align: inherit;
-	font-size: 48px;
-	margin-bottom: 28px;
+  color: inherit;
+  text-align: inherit;
+  font-size: 48px;
+  margin-bottom: 28px;
 }
 
 .hero__subtitle span {
-	color: rgba(15, 235, 158, 0.9);
+  color: rgba(15, 235, 158, 0.9);
 }
 
 .hero__slogan {
-	font-size: 18px;
+  font-size: 18px;
 }
 
 
@@ -156,44 +169,238 @@ body {
 .hero__title,
 .hero__subtitle,
 .hero__slogan {
-	color: #fff;
-	text-align: center;
+  color: #fff;
+  text-align: center;
 }
 
 
 /*
-	Делаем линии вокруг текста
+  Делаем линии вокруг текста
  */
 
 .hero__slogan {
-	overflow: hidden;
-	text-align: center;
+  text-align: center;
 }
 
 .hero__slogan:before,
 .hero__slogan:after {
-	background-color: #0feb9e;
-	content: "";
-	display: inline-block;
-	height: 1px;
-	position: relative;
-	vertical-align: middle;
-	margin: 0 23px;
-	width: 28px;
+  background-color: #0feb9e;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  margin: 0 23px;
+  width: 28px;
 }
 
 .hero__slogan:before {
-	right: 0.5em;
-	margin-left: -50%;
+  right: 0.5em;
+  margin-left: -50%;
 }
 
 .hero__slogan:after {
-	left: 0.5em;
-	margin-right: -50%;
+  left: 0.5em;
+  margin-right: -50%;
 }
 
 
 /* Соц-иконки */
 .hero__social-icons {
+  margin-top: 100px;
+  text-align: center;
+}
 
+.hero__social-icons img {
+  opacity: 0.3;
+}
+
+.hero__social-icons img:hover {
+  opacity: 1;
+}
+
+.icons-list {
+  margin: 0 auto;
+}
+
+.icons-list li {
+  display: inline-block;
+  width: 20px;
+}
+
+
+/* Секция Features */
+
+.features {
+  padding-top: 77px;
+  padding-bottom: 80px;
+  text-align: center;
+  background-color: #f4f7f9;
+}
+
+.heart-img {
+
+}
+
+.heart-img img {
+  margin-top: 25px;
+}
+
+/* Линии вокруг сердечка */
+.heart-img:before,
+.heart-img:after {
+  background-color: #d2d2d2;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  margin: 0 6px;
+  width: 90px;
+}
+
+.heart-img:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.heart-img:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.features__list {
+  margin-top: 67px;
+  display: flex;
+}
+
+.features__list li {
+  width: 300px;
+  flex: 1;
+  text-align: left;
+  background: url(../img/icon-pencil.png) no-repeat 0 0 #0000;
+  padding: 0 0 1px 58px;
+  vertical-align: middle;
+}
+
+.features__list li:first-child {
+  background: url(../img/icon-air.png) no-repeat 0 0 #0000;
+}
+
+.features__list li:last-child {
+  background: url(../img/icon-voice.png) no-repeat 0 0 #0000;
+}
+
+.features__list-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -.4px;
+  color: #062033;
+}
+
+.features__list-item p {
+  font-size: 13px;
+  color: rgba(6, 32, 51, .7);
+  line-height: 1.62;
+  padding-top: 22px;
+}
+
+/* Works */
+
+.works {
+  padding-top: 77px;
+  text-align: center; /* Такой же стиль и в предыдущей секции, можно оптимизировать */
+}
+
+.works__menu {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.works__menu-item {
+  margin: 0 20px;
+}
+
+
+.works__menu-item a {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.works__menu-item a:hover {
+  text-decoration: none;
+  background: #0eb493;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* Галлерея изображений */
+
+.inner {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+.work__images-gallery {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-content: flex-start;
+}
+
+.image {
+  width: 400px;
+  height: 300px;
+  position: relative;
+}
+
+.image-hover {
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 300px;
+  background: rgba(14, 180, 147, 0.81);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.image-hover:hover {
+  opacity: 1;
+}
+
+.image-hover h3,
+.image-hover p {
+  color: #fff;
+}
+
+.image-hover h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.image-hover p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* team */
+
+.team {
+  margin-top: 100px;
 }
