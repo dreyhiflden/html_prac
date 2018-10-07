@@ -403,4 +403,176 @@ body {
 
 .team {
   margin-top: 100px;
+  text-align: center;
+}
+
+.team-members {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.team-member {
+  width: 270px;
+  margin: 0 10px;
+  position: relative;
+}
+
+/* Здесь при наведении на блок team-member мы отображаем блок с доп-инфой */
+.team-member:hover > .team-member-info__hidden {
+  opacity: 1;
+}
+
+/* Здесь при наведении на блок team-member мы меняем цвет имени сотрудника */
+.team-member:hover > .team-member__name {
+  color: #0eb493;
+}
+
+.team-member-info__hidden {
+  width: 270px;
+  height: 300px;
+  background: rgba(14, 180, 147, 0.81);
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.team-member-headline {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 23px;
+  line-height: 1.33;
+}
+
+.team-member-desc {
+  line-height: 1.33; /* Повторяется с team-member-headline */
+  font-size: 16px;
+  height: 150px;
+  margin: 0 23px 8px 23px;
+}
+
+.team-member__social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 23px;
+}
+
+.team-member__social div {
+  width: 40px;
+  height: 40px;
+  background: #00000073;
+  margin: 0 5px;
+
+}
+
+.social-link {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-member__name {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.team-member__role {
+  margin-top: 10px;
+}
+
+/* Стили слайдера */
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.slider__item {
+  background-image: url("../img/slider_empty.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 8px;
+  width: 8px;
+  margin: 0 7px;
+}
+
+.active {
+  background-image: url("../img/slider_active.png");
+}
+
+/* Позиционирование слайдера */
+
+.slider_wrapper {
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
+
+/* Секция fun facts */
+
+.funfacts {
+  text-align: center;
+  background:
+    linear-gradient(#082a46db, #082a46db),
+    url(../img/funfacts-bg.png) no-repeat center/cover;
+  height: 600px;
+  padding-top: 100px;
+}
+
+.facts-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.facts-icons {
+  width: 130px;
+  height: 130px;
+  border: 1px solid rgba(255, 255, 255, 0.51);
+  border-radius: 50%;
+  margin: 0 auto; /* Выравниваем иконки */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fact-item {
+  margin: 0 80px;
+  color: #fff;
+  text-align: center;
+}
+
+.fact-item__headline {
+  margin-top: 50px;
+  line-height: 1.33;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.fact-item__desc {
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+/* Lets discuss */
+
+.discuss {
+  margin-top: 100px;
+  text-align: center;
 }
