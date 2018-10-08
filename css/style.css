@@ -513,7 +513,7 @@ body {
 
 /* Позиционирование слайдера */
 
-.slider_wrapper {
+.slider_container {
   margin-top: 80px;
   margin-bottom: 120px;
 }
@@ -575,4 +575,48 @@ body {
 .discuss {
   margin-top: 100px;
   text-align: center;
+}
+
+.address {
+  display: inline-block;
+  text-align: left;
+}
+
+.address__headline {
+  font-weight: bold;
+  font-size: 22px;
+  color: #062033;
+}
+
+.address__data {
+  color: #6a737b;
+}
+
+.contact-form {
+
+}
+
+.contact-form legend {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.input__name,
+.input__email,
+.input__message {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.input__name,
+.input__email {
+  width: 370px;
+}
+
+.input__message {
+  width: 740px;
+  background: red;
 }
