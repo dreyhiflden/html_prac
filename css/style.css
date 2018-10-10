@@ -1,36 +1,30 @@
-/* Шрифт на странице используется OpenSans, OpenSans Bold, OpenSans Extra Bold */
-/*font-family: 'Pacifico', cursive;*/
-/*font-family: 'Open Sans', sans-serif;*/
-
 /*
     ==============================
-    Общиие
+    Global styles
     ==============================
 */
 
 body {
   font-family: 'Open Sans', sans-serif;
+  line-height: 1.4;
 }
 
 /*
     ==============================
-    Переиспользуемые стили
+    Common used
     ==============================
 */
 
-/* Выравнивание контента по центру */
 .wrapper {
   width: 1170px;
   margin: 0 auto;
 }
 
-/* Логотип */
-.logo { /* Общее название класса, поскольку переиспользуем его в footer */
+.logo {
   font-family: 'Pacifico', cursive;
   font-size: 28px;
 }
 
-/* Сбрасываем дефолтные стили списка */
 .inline-list {
   padding: 0;
   margin: 0;
@@ -62,65 +56,85 @@ body {
   color: rgba(6, 32, 51, 0.8);
 }
 
+.slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.slider__item {
+  background-image: url("../img/slider_empty.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 8px;
+  width: 8px;
+  margin: 0 7px;
+}
+
+.slider__item--active {
+  background-image: url("../img/slider_active.png");
+}
+
+.color-black {
+  color: #000;
+}
+
 /*
    ==============================
-    Стили одностраничника
+    Main styles
     ==============================
 */
 
-/* Секция Hero */
 .hero {
   height: 800px;
-  min-height: 800px; /* Минимальная высота */
   background: #000 url(../img/header.png) no-repeat center/cover;
 }
 
-/* Стили для header */
 .header {
-  height: 70px; /* Высота header'a */
-  background: #050c1c47; /* Затемнение фона header'a */
+  height: 70px;
+  background: #050c1c47;
   color: #fff;
 }
 
 .header,
-.inner {
+.header__container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between; /* Располагаем элементы по углам (слева и справ), замена float */
+  justify-content: space-between;
   align-items: center;
   align-content: center;
 }
 
 .header__logo {
-  display: flex; /* Применяем flex отображение */
+  display: flex;
 }
 
 .header__logo .logo {
   padding-right: 25px;
 }
 
-/* Стили для слогана после логотипа */
 .slogan {
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
   font-size: 13px;
   color: #4a5455;
-  align-self: center; /* Вертикально центрируем */
+  align-self: center; /
 }
 
-/* Делаем отсупы между пунктами меню */
 .menu__item {
   margin-right: 20px;
-  border-top: 1px solid transparent; /* Делаем прозрачную границу, дабы наша li-шка не вылазила */
+  border-top: 1px solid transparent;
 }
 
-/* Убираем отсуп справа */
 .menu__item:last-child {
   margin-right: 0;
 }
 
-/* TODO: Сделать вверху 1пх линию и сделать li на всю высоту блока */
 .menu__item:hover {
   border-top: 1px solid #32b0ee;
 }
@@ -128,21 +142,16 @@ body {
 .menu__item a {
   text-decoration: none;
   color: #fff;
-  font-size: 13px; /* Общий размер текста с .slogan, можно оптимизировать */
-  line-height: 69px; /* Делаю высоту линии для того чтоб бордер в 1пх при Hover был вверху, думаю не лучшее решение и нужно здесь подумать и переделать */
+  font-size: 13px;
+  line-height: 69px;
 }
 
-
-
-/* Заголовок hero */
-
-.container {
+.hero__container {
   margin-top: 360px;
 }
 
 .hero__title {
   font-size: 62px;
-  margin-bottom: 10px;
 }
 
 .hero__title span {
@@ -153,7 +162,7 @@ body {
   color: inherit;
   text-align: inherit;
   font-size: 48px;
-  margin-bottom: 28px;
+  margin-bottom: 23px;
 }
 
 .hero__subtitle span {
@@ -164,19 +173,12 @@ body {
   font-size: 18px;
 }
 
-
-
 .hero__title,
 .hero__subtitle,
 .hero__slogan {
   color: #fff;
   text-align: center;
 }
-
-
-/*
-  Делаем линии вокруг текста
- */
 
 .hero__slogan {
   text-align: center;
@@ -204,8 +206,6 @@ body {
   margin-right: -50%;
 }
 
-
-/* Соц-иконки */
 .hero__social-icons {
   margin-top: 100px;
   text-align: center;
@@ -226,27 +226,20 @@ body {
 .icons-list li {
   display: inline-block;
   width: 20px;
+  margin: 0 6px;
 }
-
-
-/* Секция Features */
 
 .features {
   padding-top: 77px;
-  padding-bottom: 80px;
+  padding-bottom: 29px;
   text-align: center;
   background-color: #f4f7f9;
-}
-
-.heart-img {
-
 }
 
 .heart-img img {
   margin-top: 25px;
 }
 
-/* Линии вокруг сердечка */
 .heart-img:before,
 .heart-img:after {
   background-color: #d2d2d2;
@@ -271,6 +264,7 @@ body {
 
 .features__list {
   margin-top: 67px;
+  margin-bottom: 80px;
   display: flex;
 }
 
@@ -305,11 +299,13 @@ body {
   padding-top: 22px;
 }
 
-/* Works */
+.features__slider-container {
+  margin-bottom: 20px;
+}
 
 .works {
   padding-top: 77px;
-  text-align: center; /* Такой же стиль и в предыдущей секции, можно оптимизировать */
+  text-align: center;
 }
 
 .works__menu {
@@ -326,7 +322,6 @@ body {
   margin: 0 20px;
 }
 
-
 .works__menu-item a {
   padding: 5px 10px;
   text-decoration: none;
@@ -340,8 +335,6 @@ body {
   border-radius: 8px;
   color: #fff;
 }
-
-/* Галлерея изображений */
 
 .inner {
   width: 1600px;
@@ -399,8 +392,6 @@ body {
   font-size: 14px;
 }
 
-/* team */
-
 .team {
   margin-top: 100px;
   text-align: center;
@@ -418,12 +409,10 @@ body {
   position: relative;
 }
 
-/* Здесь при наведении на блок team-member мы отображаем блок с доп-инфой */
 .team-member:hover > .team-member-info__hidden {
   opacity: 1;
 }
 
-/* Здесь при наведении на блок team-member мы меняем цвет имени сотрудника */
 .team-member:hover > .team-member__name {
   color: #0eb493;
 }
@@ -444,11 +433,9 @@ body {
   font-weight: bold;
   font-size: 16px;
   margin: 23px;
-  line-height: 1.33;
 }
 
 .team-member-desc {
-  line-height: 1.33; /* Повторяется с team-member-headline */
   font-size: 16px;
   height: 150px;
   margin: 0 23px 8px 23px;
@@ -465,7 +452,6 @@ body {
   height: 40px;
   background: #00000073;
   margin: 0 5px;
-
 }
 
 .social-link {
@@ -486,39 +472,10 @@ body {
   margin-top: 10px;
 }
 
-/* Стили слайдера */
-
-.slider {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: stretch;
-  align-content: stretch;
-}
-
-.slider__item {
-  background-image: url("../img/slider_empty.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  height: 8px;
-  width: 8px;
-  margin: 0 7px;
-}
-
-.active {
-  background-image: url("../img/slider_active.png");
-}
-
-/* Позиционирование слайдера */
-
 .slider_container {
   margin-top: 80px;
   margin-bottom: 120px;
 }
-
-/* Секция fun facts */
 
 .funfacts {
   text-align: center;
@@ -544,7 +501,7 @@ body {
   height: 130px;
   border: 1px solid rgba(255, 255, 255, 0.51);
   border-radius: 50%;
-  margin: 0 auto; /* Выравниваем иконки */
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -558,7 +515,6 @@ body {
 
 .fact-item__headline {
   margin-top: 50px;
-  line-height: 1.33;
   font-size: 60px;
   text-transform: uppercase;
   font-weight: 600;
@@ -570,16 +526,20 @@ body {
   font-size: 18px;
 }
 
-/* Lets discuss */
-
 .discuss {
   margin-top: 100px;
   text-align: center;
 }
 
+.discuss_container {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .address {
-  display: inline-block;
   text-align: left;
+  width: 280px;
 }
 
 .address__headline {
@@ -589,17 +549,20 @@ body {
 }
 
 .address__data {
+  margin-top: 40px;
   color: #6a737b;
 }
 
 .contact-form {
-
+  width: 775px;
+  margin: 0 30px 0 30px;
 }
 
 .contact-form legend {
   font-size: 24px;
   font-weight: 600;
   text-align: left;
+  margin: 0 0 50px 0;
 }
 
 .input__name,
@@ -607,6 +570,8 @@ body {
 .input__message {
   border: 0;
   outline: 0;
+  margin-bottom: 35px;
+  padding: 10px 0 10px 0;
   background: transparent;
   border-bottom: 1px solid #d2d2d2;
 }
@@ -616,7 +581,121 @@ body {
   width: 370px;
 }
 
+.input__email {
+  margin-left: 30px;
+}
+
 .input__message {
-  width: 740px;
-  background: red;
+  width: 774px;
+}
+
+.discuss__social-links {
+  width: 26px;
+}
+
+.discuss__social-links-item {
+  margin-bottom: 20px;
+  width: 26px;
+  height: 26px;
+}
+
+.btn-submit {
+  background: #fff;
+  border: none;
+  position: relative;
+}
+
+.btn-submit::before {
+  content: url(../img/discuss-send-msg.png);
+  position: absolute;
+  top: 0;
+  left: -25px;
+}
+
+.btn-submit-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.discuss__map {
+  margin-top: 100px;
+  background: #fff url("../img/map.png") no-repeat center/cover;
+  width: 100%;
+  height: 215px;
+  border-bottom: 5px solid black;
+}
+
+.footer {
+  background: #21b697;
+  font-size: 13px;
+  line-height: 2;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+.footer-container {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__logo-container {
+  width: 255px;
+  margin-right: 30px;
+}
+
+.footer__subscribe-container {
+  width: 271px;
+  margin-right: 30px;
+}
+
+.subscribe {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.subscribe__field {
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 2px;
+  height: 40px;
+  text-indent: 10px;
+  width: 100%;
+}
+
+.subscribe__btn {
+  background-color: #0000;
+  border: 0 none;
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 6px;
+  cursor: pointer;
+}
+
+.explore-list {
+  columns: 2;
+}
+
+.footer__logo-container-descr {
+  margin-top: 50px;
+
+}
+
+.sub-section-headline {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 22px 0 54px 0;
+}
+
+.footer__copyright-container {
+  width: 255px;
+}
+
+.footer__copyright {
+  margin: 110px 0 40px;
+  border-left: 1px solid #167E73;
+  line-height: 1.8;
+  padding-left: 10px;
 }

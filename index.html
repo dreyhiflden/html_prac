@@ -3,26 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="eusmod tempor incididunt ut labore et dolore magna aliqua. ">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Pacifico&amp;subset=cyrillic"
         rel="stylesheet">
 </head>
 <body>
-
-
-<!-- Hero section -->
 <section class="hero">
-
-  <!-- Шапка -->
   <header class="header">
-    <div class="wrapper inner">
-      <!-- Обертка для лого и слогана -->
+    <div class="wrapper header__container">
       <div class="header__logo">
         <h1 class="logo">Brandi</h1>
         <span class="slogan">| &nbsp;&nbsp; I’am your tag line</span>
       </div>
-      <!-- Меню в шапке-->
       <nav class="header__menu">
         <ul class="inline-list">
           <li class="menu__item"><a href="#">Home</a></li>
@@ -34,18 +29,11 @@
       </nav>
     </div>
   </header>
-
-  <!-- Заголовок hero секции -->
-  <div class="wrapper container">
-    <!--
-    TODO: Есть сомнение в том, что при выделении идет наложение выделенной области title на subtitle
-    -->
+  <div class="wrapper hero__container">
     <h2 class="hero__title">Meet <span>Brandi!</span></h2>
     <p class="hero__subtitle"><span>/creative</span> one page template.</p>
     <p class="hero__slogan">We are a team of professionals</p>
   </div>
-
-  <!-- Социальные кнопки -->
   <div class="hero__social-icons">
     <ul class="icons-list">
       <li><a href="#"><img src="img/facebook.png" alt="Facebook"></a></li>
@@ -54,18 +42,11 @@
       <li><a href="#"><img src="img/dribbble.png" alt="Dribble"></a></li>
     </ul>
   </div>
-
 </section>
-
-<!-- Секция features -->
-
 <section class="features">
   <div class="wrapper">
-    <!-- Заголовок -->
     <h2 class="section-title">Features</h2>
     <figure class="heart-img"><img src="img/heart.png" alt="Heart"></figure>
-
-    <!-- Content -->
     <ul class="features__list">
       <li class="features__list-item"><h3>Branding</h3>
         <p>Sed ut perspiciatis unde omnis iste natus error sit
@@ -81,11 +62,15 @@
           voluptatem accusantium
           doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p></li>
     </ul>
+    <div class="features__slider-container">
+      <ul class="slider">
+        <li class="slider__item slider__item--active"></li>
+        <li class="slider__item"></li>
+        <li class="slider__item"></li>
+      </ul>
+    </div>
   </div>
 </section>
-
-<!-- Секция Works -->
-
 <section class="works">
   <div class="wrapper">
     <h2 class="section-title">Works</h2>
@@ -94,7 +79,6 @@
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
       aperiam, eaque ipsa quae ab illo inventore
     </p>
-    <!-- Горизонтальное меню сортировки категорий изображений -->
     <ul class="works__menu">
       <li class="works__menu-item"><a href="#">All</a></li>
       <li class="works__menu-item"><a href="#">Branding</a></li>
@@ -102,10 +86,7 @@
       <li class="works__menu-item"><a href="#">Logo Design</a></li>
       <li class="works__menu-item"><a href="#">Photohraphy</a></li>
     </ul>
-    <!-- Заканчиваем wrapper поскольку галерея изображений будет больше по ширине -->
   </div>
-
-  <!-- Изобрадения -->
   <div class="inner">
     <section class="work__images-gallery">
       <div class="image">
@@ -167,8 +148,6 @@
     </section>
   </div>
 </section>
-
-    <!-- Meet our team -->
 <section class="team">
   <div class="wrapper">
     <h2 class="section-title">Meet our team</h2>
@@ -177,7 +156,6 @@
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
       aperiam, eaque ipsa quae ab illo inventore
     </p>
-
     <div class="team-members">
       <div class="team-member">
         <img src="img/team_1.png" alt="Team member">
@@ -250,15 +228,13 @@
     </div>
     <div class="slider_container">
       <ul class="slider">
-        <li class="slider__item active"></li>
+        <li class="slider__item slider__item--active"></li>
         <li class="slider__item"></li>
         <li class="slider__item"></li>
       </ul>
     </div>
   </div>
 </section>
-
-<!-- Some fun facts -->
 <section class="funfacts">
   <h2 class="section-title">Some Fun Facts</h2>
   <figure class="heart-img"><img class="white-text" src="img/heart-white.png" alt="Heart"></figure>
@@ -286,9 +262,6 @@
     </div>
   </div>
 </section>
-<!-- End of Some fun facts -->
-
-<!-- Lets Discuss -->
 <section class="discuss">
   <div class="wrapper">
     <h2 class="section-title">Lets Discuss</h2>
@@ -297,7 +270,6 @@
       Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
     </p>
     <div class="discuss_container">
-      <!-- Address -->
       <div class="address">
         <h3 class="address__headline">Cras at ultrices erat, sed vulputate!</h3>
         <p class="address__data">2345 Setwant natrer, 1234,<br>
@@ -306,7 +278,6 @@
           hello@brandi.com<br>
           ww.brandi.com</p>
       </div>
-      <!-- Form -->
       <form class="contact-form">
         <fieldset>
           <legend>Say hello!</legend>
@@ -318,12 +289,81 @@
             <input type="text" name="message" class="input__message" id="message" placeholder="Message">
           </p>
         </fieldset>
-        <p><input type="submit" value="Отправить"></p>
+        <p class="btn-submit-container"><button class="btn-submit" type="submit">Send message</button></p>
       </form>
+      <div class="discuss__social-links">
+        <ul class="discuss__social-links-list">
+          <li class="discuss__social-links-item">
+            <a href="#">
+              <img src="img/discuss-behance.png" alt="Behance">
+            </a>
+          </li>
+          <li class="discuss__social-links-item">
+            <a href="#"><img src="img/discuss-twitter.png" alt="Twitter">
+            </a>
+          </li>
+          <li class="discuss__social-links-item">
+            <a href="#">
+              <img src="img/discuss-dribbble.png" alt="Dribble">
+            </a>
+          </li>
+          <li class="discuss__social-links-item">
+            <a href="#">
+              <img src="img/discuss-forrst.png" alt="Forrst">
+            </a>
+          </li>
+          <li class="discuss__social-links-item">
+            <a href="#">
+              <img src="img/discuss-google-plus.png" alt="Google Plus">
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
+  <div class="discuss__map"></div>
 </section>
-<!-- End Lets Discuss -->
-
+<footer class="footer">
+    <div class="wrapper">
+      <div class="footer-container">
+        <div class="footer__logo-container">
+          <h3 class="logo">Brandi</h3>
+          <p class="footer__logo-container-descr">eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.</p>
+        </div>
+        <div class="footer__subscribe-container">
+          <p class="sub-section-headline">Subcribe</p>
+          <form class="subscribe">
+            <input class="subscribe__field" type="text" name="subscribe" id="sub" title="subscribe">
+            <input class="subscribe__btn" type="submit" value="→" id="subs">
+          </form>
+          <p>
+            eusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="footer__explore-container">
+          <p class="sub-section-headline">Explore</p>
+          <ul class="explore-list">
+            <li>Envato</li>
+            <li>Themecurve</li>
+            <li>Kreativeshowcase</li>
+            <li>Freebiescurve</li>
+            <li>Themeforest</li>
+            <li>Microsoft</li>
+            <li>Google</li>
+            <li>Yahoo</li>
+          </ul>
+        </div>
+        <div class="footer__copyright-container">
+          <p class="footer__copyright">Created with <img src="img/heart.png" alt="Love"> by <span class="color-black">
+            themecurve</span>,
+          exclusive for kreativeshowcase</p>
+          <p class="color-black">© 2014 Brandi. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+</footer>
 </body>
 </html>
